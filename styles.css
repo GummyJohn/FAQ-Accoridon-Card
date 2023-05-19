@@ -5,7 +5,8 @@ body{
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(rgb(127, 0 ,255), rgb(102, 0, 204))
+  background: linear-gradient(rgb(127, 0 ,255), rgb(102, 0, 204));
+  z-index: 2;
 }
 
 .grid-container{
@@ -16,30 +17,13 @@ body{
   border: 1px solid white;
   background: white;
   border-radius: 2rem;
-  width: 80%;
+  width: 70%;
+  height: 35%;
+  overflow: hidden;
 }
 
-.images{
-  width: 50%;
-  position: relative;
-}
-
-.image1 {
-  position: absolute;
-  top: -20px;
-}
-
-.image2 {
-  width: 100%;
-  height: 100%;
-  background-image: url('./images/icon-arrow-down.svg');
-  background: no-repeat;
-  background-position-y: -70px;
-}
-
-.image3{
-  width: 300px;
-  z-index: 0;
+.title{
+  margin-bottom: -.8px;
 }
 
 .content{
@@ -69,16 +53,52 @@ button:hover{
 }
 
 .subtext{
-  color: gray;
+  color: rgb(127, 0 ,255);
   font-size: 1rem;
   margin-top: -8px;
   line-height: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition:  1s ease;
 }
 
-.imgarrow{
+.container.active .subtext{
+  max-height: 200px;
+} *
+
+.container.active .arrow{
   transform: rotate(180deg);
+}
+
+.arrow{
+  transition: 0.5s ease;
 }
 
 .bold{
   font-weight: bolder;
 }
+
+.images{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image-one {
+  position: absolute;
+  top: 150px;
+  left: -30px;
+  z-index: 1;
+}
+
+.image-two {
+  position: absolute;
+  top: 50px;
+  width: 100%
+}
+
+.image-three{
+  position: absolute;
+  width: 100%;
+}
+
