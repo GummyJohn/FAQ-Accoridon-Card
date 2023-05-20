@@ -6,7 +6,6 @@ body{
   justify-content: center;
   height: 100vh;
   background: linear-gradient(rgb(127, 0 ,255), rgb(102, 0, 204));
-  z-index: 2;
 }
 
 .grid-container{
@@ -18,8 +17,8 @@ body{
   background: white;
   border-radius: 2rem;
   width: 70%;
-  height: 35%;
-  overflow: hidden;
+  max-width: 1000px;
+  height: 38%;
 }
 
 .title{
@@ -41,6 +40,7 @@ button{
   align-items: center;
   width: 100%;
   padding: 1rem 0;
+  padding-right: .5rem;
   background: white;
   border: none;
   color: gray;
@@ -84,21 +84,32 @@ button:hover{
   position: relative;
 }
 
-.image-one {
+.image-one{
+  background-image: url('./images/bg-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: 195%;
+  background-position-x: -500px;
+  background-position-y: -265px;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 150px;
-  left: -30px;
-  z-index: 1;
 }
 
-.image-two {
+.image-one img{
   position: absolute;
-  top: 50px;
-  width: 100%
+  top: 190px;
+  left: -110px;
+  z-index: 3;
 }
 
-.image-three{
+.image-two{
   position: absolute;
   width: 100%;
-}
-
+  height: 100%;
+  background-image: url('images/illustration-woman-online-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: 95%;
+  top: 70px;
+  left: -58px;
+  z-index: 0;
+} 
