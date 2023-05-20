@@ -67,11 +67,6 @@ containers.forEach((contain) => {
   })
 })
 
-.content.addEventListener('click', () => {
-  
-})
-
-
 
 
 
