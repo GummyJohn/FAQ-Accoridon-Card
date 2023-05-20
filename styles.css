@@ -81,7 +81,9 @@ button:hover{
 .images{
   width: 100%;
   height: 100%;
+  overflow: hidden;
   position: relative;
+  margin-left: -2px;
 }
 
 .image-one{
@@ -96,9 +98,9 @@ button:hover{
 }
 
 .image-one img{
-  position: absolute;
-  top: 190px;
-  left: -110px;
+  position: fixed;
+  top: 560px;
+  left: 100px;
   z-index: 3;
 }
 

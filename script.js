@@ -47,15 +47,13 @@ const containers = document.querySelectorAll('.container');
 
 for(let i = 0; i < containers.length; i++){
   let index = i;
+  
   if(index in questionObj){
     containers[i].prepend(
       button(questionObj[index])
     )
   }
-}
 
-for(let i = 0; i < containers.length; i++){
-  let index = i;
   if(index in answersObj){
     containers[index].appendChild(
       answer(answersObj[index])
@@ -63,13 +61,16 @@ for(let i = 0; i < containers.length; i++){
   }
 }
 
-const buttons = document.querySelectorAll('.button');
-
 containers.forEach((contain) => {
   contain.addEventListener('click', function(){
     contain.classList.toggle('active');
   })
 })
+
+.content.addEventListener('click', () => {
+  
+})
+
 
 
 
