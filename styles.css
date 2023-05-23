@@ -5,6 +5,7 @@ body{
   align-items: center;
   justify-content: center;
   height: 100vh;
+  position: relative;
   background: linear-gradient(rgb(127, 0 ,255), rgb(102, 0, 204));
 
 }
@@ -100,11 +101,11 @@ button:hover{
   overflow: hidden;
 }
 
+
 .img-box{
   position: absolute;
   top: 190px;
   left: -110px;
-  z-index: 5;
 }
 
 .image-two{
